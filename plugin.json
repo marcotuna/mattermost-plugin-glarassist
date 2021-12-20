@@ -1,0 +1,35 @@
+{
+    "id": "com.glartek.glarassist",
+    "name": "GlarAssist",
+    "description": "This is a Mattermost plugin for the Glartek Remote Assistance.",
+    "version": "0.1.4",
+    "min_server_version": "5.12.0",
+    "server": {
+        "executables": {
+            "linux-amd64": "server/dist/plugin-linux-amd64"
+        }
+    },
+    "webapp": {
+        "bundle_path": "webapp/dist/main.js"
+    },
+    "settings_schema": {
+        "header": "",
+        "footer": "",
+        "settings": [
+            {
+                "key": "SERVER_URL",
+                "display_name": "GlarAssist Server URL",
+                "type": "text",
+                "default": "https://app.glarassist.com",
+                "help_text": "Enter the URL of the GlarAssist server."
+            },
+            {
+                "key": "API_SECRET",
+                "display_name": "Secret",
+                "type": "text",
+                "default": "",
+                "help_text": "The secret to connect to the GlarAssist."
+            }
+        ]
+    }
+}
